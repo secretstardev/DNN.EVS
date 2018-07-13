@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceDefinition name="AzureBlobService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2015-04.2.6">
+  <WebRole name="EVSWebAPI" vmsize="ExtraSmall" enableNativeCodeExecution="true">
+    <Sites>
+      <Site name="Web">
+        <Bindings>
+          <Binding name="Endpoint1" endpointName="Endpoint1" />
+        </Bindings>
+      </Site>
+    </Sites>
+    <Endpoints>
+      <InputEndpoint name="Endpoint1" protocol="http" port="80" />
+    </Endpoints>
+    <Imports>
+    </Imports>
+    <Certificates>
+    </Certificates>
+    <ConfigurationSettings>
+      <Setting name="CloudStorageConnectionString" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
+      <Setting name="SMTP_Password" />
+      <Setting name="SMTP_Username" />
+      <Setting name="SMTP_Server" />
+      <Setting name="Email_From" />
+      <Setting name="Email_To" />
+      <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" />
+      <Setting name="evsdatabase" />
+    </ConfigurationSettings>
+    <LocalResources>
+    </LocalResources>
+  </WebRole>
+</ServiceDefinition>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AzureCredentials>{"ServiceManagementEndpoint":"https:\/\/management.core.windows.net\/","ResourceManagementEndpoint":"https:\/\/management.azure.com\/","SubscriptionId":"6d9a0c4d-f121-4991-ad6c-512921bccbfe"}</AzureCredentials>
+    <AzureDeleteDeploymentOnFailure>True</AzureDeleteDeploymentOnFailure>
+    <AzureDeploymentLabel>EVSWorker01</AzureDeploymentLabel>
+    <AzureDeploymentReplacementMethod>AutomaticUpgrade</AzureDeploymentReplacementMethod>
+    <AzureSlot>Staging</AzureSlot>
+    <AzureEnableRemoteDesktop>True</AzureEnableRemoteDesktop>
+    <AzureEnableWebDeploy>False</AzureEnableWebDeploy>
+    <AzureFallbackToDeleteAndRecreateIfUpgradeFails>True</AzureFallbackToDeleteAndRecreateIfUpgradeFails>
+    <AzureHostedServiceLabel>evsworker01</AzureHostedServiceLabel>
+    <AzureHostedServiceName>evsworker01</AzureHostedServiceName>
+    <AzureEnableIntelliTrace>False</AzureEnableIntelliTrace>
+    <AzureEnableProfiling>False</AzureEnableProfiling>
+    <AzureServiceConfiguration>Cloud</AzureServiceConfiguration>
+    <AzureSolutionConfiguration>Debug</AzureSolutionConfiguration>
+    <AzureStorageAccountLabel>{account label}</AzureStorageAccountLabel>
+    <AzureStorageAccountName>{account name}</AzureStorageAccountName>
+    <AzureAppendTimestampToDeploymentLabel>True</AzureAppendTimestampToDeploymentLabel>
+    <AzureHostedServiceResourceGroup />
+    <EnableApplicationInsights>True</EnableApplicationInsights>
+  </PropertyGroup>
+</Project>

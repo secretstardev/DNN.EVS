@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>EVS (Extension Verification Service) Results</title>
+    <meta name="description" content="Quickly and easily verify that extensions run seamlessly with the DNN Platform." >
+    <meta property="og:description" content="Quickly and easily verify that extensions run seamlessly with the DNN Platform." />
+    <link rel="stylesheet" type="text/css" href="./css/default.css" />
+    <script type="text/javascript" src="./scripts/jquery-1.6.4.js"></script>
+    <script type="text/javascript" src="./scripts/jquery-ui-1.9.2.js"></script>
+    <script type="text/javascript" src="./scripts/knockout-2.2.0.js"></script>
+    <script type="text/javascript" src="./scripts/jquery.cookie.js"></script>
+    <script type="text/javascript" src="scripts/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="./scripts/checkBrowser.js"></script>
+    <script type="text/javascript" src="./scripts/results.js"></script>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', '{google track id}']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+<body>
+    <div id="appWrapper">
+        <div id="appHeader">
+            <img src="Images/evsLogo.png"/>
+        </div>
+        <div id="appBody" css="display:none;">
+            <div id="resultsHeader">
+                <h2>Verification Summary</h2>
+                <div id="uploadNew"><a href="/default.htm"><img src="Images/Upload.png"/></a></div>
+                <div class="clear"></div>
+            </div>
+            <div data-bind="template: { name: 'extension-template', data: extension }"></div>
+            <div id="messages">
+                <h3 onClick="_gaq.push(['_trackEvent', 'View Results', 'Error', 'User opened the error results']);">Errors (<span id="errorCount">0</span>)</h3>
+                <div data-bind="template: { name: 'extensionMessages-template', foreach: extensionErrorMessages }"></div>
+                <h3 onClick="_gaq.push(['_trackEvent', 'View Results', 'Warnings', 'User opened the warning results']);">Warnings (<span id="warningCount">0</span>)</h3>
+                <div data-bind="template: { name: 'extensionMessages-template', foreach: extensionWarnMessages }"></div>
+                <h3 onClick="_gaq.push(['_trackEvent', 'View Results', 'Info', 'User opened the info results']);">Info Messages (<span id="infoCount">0</span>)</h3>
+                <div data-bind="template: { name: 'extensionMessages-template', foreach: extensionInfoMessages }"></div>
+                <h3 onClick="_gaq.push(['_trackEvent', 'View Results', 'SystemErrors', 'User opened the system errors results']);">System Errors (<span id="sysCount">0</span>)</h3>
+                <div data-bind="template: { name: 'extensionMessages-template', foreach: extensionSysMessages }"></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/html" id="extension-template">
+        <div id="fileName">
+            <h3 data-bind="text: OriginalFileName"></h3>
+        </div>
+        <div id="resultsFloats">
+            <div id="resultsLeft">
+                <div id="detailsOuter">
+                    <table id="detailsTable" data-bind="template: { name: 'extensionDetails-template', foreach: ExtensionDetails, as: 'detail' }"></table>
+                </div>
+            </div>
+            <div id="resultsRight">
+                <h3>Download these results</h3>
+                <ul class="icons">
+                    <li><a href="#" id="dlResultsCsv" target="_blank" onClick="_gaq.push(['_trackEvent', 'Download Results', 'CSV', 'User Downloaded Results As CSV']);">
+                            <img src="Images/CSV.png" /></a></li>
+                    <li><a href="#" id="dlResultsXlsx" target="_blank" onClick="_gaq.push(['_trackEvent', 'Download Results', 'XLSX', 'User Downloaded Results As XLSX']);">
+                            <img src="Images/XLS.png" /></a></li>
+                    <li><a href="#" id="dlResultsXml" target="_blank" onClick="_gaq.push(['_trackEvent', 'Download Results', 'XML', 'User Downloaded Results As XML']);">
+                            <img src="Images/XML.png" /></a></li>
+                </ul>
+                <br />
+                <h3>Email results to me</h3>
+                <div>
+                    <form id="sendResults" class="form" method="post" action="">
+                        <input type="text" id="email" name="email" class="required email"></input>&nbsp;&nbsp;<input type="submit" id="submit" name="submit" value="submit" class="button"  onClick="_gaq.push(['_trackEvent', 'Share', 'Email', 'User Shared Results Via Email']);" />
+                    </form>
+                </div>
+                <br />
+                <h3>Share these results</h3>
+                <ul class="icons">
+                    <li><a href="#" id="fbLink" target="_blank" onClick="_gaq.push(['_trackEvent', 'Share', 'Facebook', 'User Shared Results Via Facebook']);">
+                            <img src="Images/Facebook.png" /></a></li>
+                    <li><a href="#" id="liLink" target="_blank" onClick="_gaq.push(['_trackEvent', 'Share', 'LinkedIn', 'User Shared Results Via LinkedIn']);">
+                            <img src="Images/Linkedin.png" /></a></li>
+                    <li><a href="#" id="tLink" target="_blank" onClick="_gaq.push(['_trackEvent', 'Share', 'Twitter', 'User Shared Results Via Twitter']);">
+                            <img src="Images/Twitter.png" /></a></li>
+                </ul>
+                <br />
+                <h3>Help improve the EVS</h3>
+                <input type="button" id="Go to Forum" name="Go to Forum" value="Go to Forum" class="buttonSecondary" onClick="_gaq.push(['_trackEvent', 'Feedback', 'Forum', 'User clicked the button to leave feedback via the forums']); window.open('http://www.dnnsoftware.com/forums/forumid/226/scope/threads');" />
+                <br/>
+                <span id="azureOutput" style="display: none;">
+                    <br/>
+                    <h3>Azure Checker Output</h3>
+                    <a data-bind="attr: { href: SQLAzureScriptsURI }">Download</a>
+                </span>
+                <span class="hideyoKids">
+                    <p>ExtensionID: <span data-bind="text: ExtensionID"></span></p>
+                    <p>FileID: <span data-bind="text: FileID"></span></p>
+                    <p>FileLocation: <span data-bind="text: FileLocation"></span></p>
+                    <p>ContentType: <span data-bind="text: ContentType"></span></p>
+                    <p>ContentSize: <span data-bind="text: ContentSize"></span></p>
+                    <p>UserKey: <span data-bind="text: UserKey"></span></p>
+                    <p>UserIP: <span data-bind="text: UserIP"></span></p>
+                    <p>UploadedDate: <span data-bind="text: UploadedDate"></span></p>
+                    <p>ProcessedDate: <span data-bind="text: ProcessedDate"></span></p>
+                </span>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </script>
+
+    <script type="text/html" id="extensionDetails-template">
+        <tr>
+            <td>
+                <p><span data-bind="text: DetailName"></span></p>
+            </td>
+            <td>
+                <p><span data-bind="text: DetailValue"></span></p>
+            </td>
+            <td style="display: none;">
+                <p>ExtensionDetailID: <span data-bind="text: ExtensionDetailID"></span></p>
+                <p>ExtensionID: <span data-bind="text: ExtensionID"></span></p>
+                <p>DetailID: <span data-bind="text: DetailID"></span></p>
+            </td>
+        </tr>
+    </script>
+
+    <script type="text/html" id="extensionMessages-template">
+        <div class="messageItem">
+            <p><strong>ExtensionMessageID:</strong> <span data-bind="text: ExtensionMessageID"></span></p>
+            <p><strong>ExtensionID:</strong> <span data-bind="text: ExtensionID"></span></p>
+            <p><strong>MessageTypeID:</strong> <span data-bind="text: MessageTypeID"></span></p>
+            <p><strong>MessageID:</strong> <span data-bind="text: MessageID"></span></p>
+            <p><strong>Message:</strong> <span data-bind="text: Message"></span></p>
+            <p><strong>Rule:</strong> <span data-bind="text: Rule"></span></p>
+            <p data-bind="if: MessageLink"><a data-bind="attr: { href: MessageLink}" target="_blank"><strong>More Info</strong></a></p>
+        </div>
+    </script>
+</body>
+</html>

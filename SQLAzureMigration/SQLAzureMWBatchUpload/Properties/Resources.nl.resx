@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DBCreated" xml:space="preserve">
+    <value>Database die is gemaakt</value>
+    <comment>v3.9.19</comment>
+  </data>
+  <data name="DBCreateFailed" xml:space="preserve">
+    <value>Sorry, mislukte om de database te maken.</value>
+    <comment>v3.9.19</comment>
+  </data>
+  <data name="ErrorGettingSQLVersion" xml:space="preserve">
+    <value>Sorry, niet in staat om te bepalen van de versie van SQL server ({0})</value>
+    <comment>v3.9.19</comment>
+  </data>
+  <data name="ErrorOpeningFile" xml:space="preserve">
+    <value>Sorry, error opening uitvoer bestand {0}. Fout: {1}</value>
+  </data>
+  <data name="InvalidDatabaseEdition" xml:space="preserve">
+    <value>Sorry database edition {0} is ongeldig. Voer web, business, basic, standard of premium.</value>
+    <comment>v3.9.18</comment>
+  </data>
+  <data name="InvalidDatabaseEdition1V12" xml:space="preserve">
+    <value>Sorry database edition {0} is ongeldig. Voer basic, standard of premium.</value>
+    <comment>v3.9.19</comment>
+  </data>
+  <data name="InvalidDatabaseSize" xml:space="preserve">
+    <value>Sorry, maar uw database grootte {0} is niet geldig voor geselecteerde uitgave {1}.
+
+Geldige maten per editie zijn:
+  web = 100 MB, 1 GB, 5 GB
+  business = 10 GB, 20 GB, 30 GB, 40 GB, 50 GB, 100 GB of 150 GB
+  basic = 100 MB, 500 MB, 1 GB, 2 GB
+  standard = 100 MB, 500 MB, 1 GB, 2 GB, 5 GB, 10 GB, 20 GB, 30 GB, 40 GB, 50 GB, 100 GB, 150 GB, 200 GB of 250 GB
+  premium = 100 MB, 500 MB, 1 GB, 2 GB, 5 GB, 10 GB, 20 GB, 30 GB, 40 GB, 50 GB, 100 GB, 150 GB, 200 GB, 250 GB, 300 GB, 400 GB of 500 GB</value>
+    <comment>v3.9.18</comment>
+  </data>
+  <data name="InvalidPerformanceLevel" xml:space="preserve">
+    <value>Sorry, prestaties niveau {0} voor editie {1} is ongeldig. De geldige prestatieniveaus zijn:
+  standard = S0, S1 en S2
+  premium = P1, P2 en P3</value>
+    <comment>v3.9.18</comment>
+  </data>
+  <data name="InvalidPerformanceLevelV12" xml:space="preserve">
+    <value>Sorry, prestaties niveau {0} voor editie {1} is ongeldig. De geldige prestatieniveaus zijn:
+  standard = S0, S1, S2 en S3
+  premium = P1, P2 en P3</value>
+    <comment>v3.9.19</comment>
+  </data>
+  <data name="ProgramArgs" xml:space="preserve">
+    <value>Alle parameters voor SQLAzureMWBatchUpload kunnen worden gevonden in het configuratiebestand.
+
+Als u wilt, kunt u het configuratiebestand vervangen door de parameters die u wilt negeren.
+
+gebruik: SQLAzureMWBatchUpload -S server - U username -P wachtwoord -D Noordenwind -d true -e standard -l S1 -s "250 GB"
+
+[-S doel servernaam]
+[-U username]
+[-P wachtwoord]
+[-D doel databasenaam]
+[-c database collatie]
+[-i TSQL invoerbestand]
+[-o uitvoerbestand]
+[-e editie (web, business, basic, standard of premium)
+[-l prestatieniveau (standard = S0, S1, S2 of S3, premium = P1, P2 en P3]
+[-s-Databaseomvang
+    web = 100 MB, 1 GB, of 5 GB
+    business = 10 GB, 20 GB, 30 GB, 40 GB, 50 GB, 100 GB of 150 GB
+    basic = 100 MB, 500 MB, 1 GB of 2 GB
+    standard = 100 MB, 500 MB, 1 GB, 2 GB, 5 GB, 10 GB, 20 GB, 30 GB, 40 GB, 50 GB, 100 GB, 150 GB, 200 GB of 250 GB
+    premium = 100 MB, 500 MB, 1 GB, 2 GB, 5 GB, 10 GB, 20 GB, 30 GB, 40 GB, 50 GB, 100 GB, 150 GB, 200 GB, 250 GB, 300 GB, 400 GB of 500 GB]
+[-T vertrouwde verbinding]
+[-d true of false} drop bestaande database]
+
+Opmerking dat de bovenstaande args de waarden in het config-bestand van de toepassing negeren.</value>
+    <comment>v3.9.18</comment>
+  </data>
+  <data name="ProgramVersion" xml:space="preserve">
+    <value>{0}, Version {1}</value>
+  </data>
+  <data name="True" xml:space="preserve">
+    <value>true</value>
+  </data>
+  <data name="WaitingForDBCreation" xml:space="preserve">
+    <value>Wachten voor database moet worden gemaakt...</value>
+    <comment>v3.9.19</comment>
+  </data>
+</root>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceDefinition name="EVSWorkerService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2015-04.2.6">
+  <WorkerRole name="EVSWorker" vmsize="ExtraSmall">
+    <Startup>
+      <Task commandLine="startup.cmd" executionContext="elevated" taskType="simple" />
+    </Startup>
+    <Imports>
+      <Import moduleName="Diagnostics" />
+    </Imports>
+    <ConfigurationSettings>
+      <Setting name="CloudStorageConnectionString" />
+      <Setting name="Debug.Enabled" />
+      <Setting name="Debug.HostName" />
+      <Setting name="Debug.StorageAccount" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
+      <Setting name="evsdatabase" />
+      <Setting name="SMTP_Password" />
+      <Setting name="SMTP_Username" />
+      <Setting name="SMTP_Server" />
+      <Setting name="Email_From" />
+      <Setting name="Email_To" />
+      <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" />
+    </ConfigurationSettings>
+    <LocalResources>
+      <LocalStorage name="CustomTempLocalStore" cleanOnRoleRecycle="true" sizeInMB="1024" />
+    </LocalResources>
+  </WorkerRole>
+</ServiceDefinition>

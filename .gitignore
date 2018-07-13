@@ -1,0 +1,17 @@
+.vs
+bin
+obj
+packages
+
+*.dll
+*.pdb
+*.zip
+*.rar
+*.exe
+*.user
+*.suo
+
+!Externals/*
+!evsservices/.nuget/NuGet.exe
+!PackageVerification/.nuget/NuGet.exe
+*.DotSettings

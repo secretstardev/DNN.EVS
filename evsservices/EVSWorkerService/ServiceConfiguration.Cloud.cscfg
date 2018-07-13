@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="EVSWorkerService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="3" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="EVSWorker">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="CloudStorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName={account name};AccountKey={account key}" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName={account name};AccountKey={account key}" />
+      <Setting name="Debug.Enabled" value="false" />
+      <Setting name="Debug.HostName" value="{host name}" />
+      <Setting name="Debug.StorageAccount" value="DefaultEndpointsProtocol=https;AccountName={account name};AccountKey={account key}" />
+      <Setting name="evsdatabase" value="Server={server};Database={database};User ID={user};Password={password};Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" />
+      <Setting name="SMTP_Password" value="{password}" />
+      <Setting name="SMTP_Username" value="{username}" />
+      <Setting name="SMTP_Server" value="{server}" />
+      <Setting name="Email_From" value="{email address}" />
+      <Setting name="Email_To" value="{email address}" />
+      <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" value="{id}" />
+    </ConfigurationSettings>
+    <Certificates>
+    </Certificates>
+  </Role>
+</ServiceConfiguration>

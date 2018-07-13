@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>EVS (Extension Verification Service)</title>
+    <meta name="description" content="Quickly and easily verify that extensions run seamlessly with the DNN Platform." >
+    <meta property="og:description" content="Quickly and easily verify that extensions run seamlessly with the DNN Platform." />
+    <link rel="stylesheet" type="text/css" href="./css/default.css" />
+    <script type="text/javascript" src="./scripts/jquery-1.6.4.js"></script>
+    <script type="text/javascript" src="./scripts/jquery.cookie.js"></script>
+    <script type="text/javascript" src="./scripts/checkBrowser.js"></script>
+    <script type="text/javascript" src="./scripts/blockBlobUpload.js"></script>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36889900-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+<body>
+    <div id="appWrapper">
+        <div id="appHeader">
+            <img src="Images/evsLogo.png"/>
+        </div>
+        <div id="appBody">
+            <div id="appOldBrowser">
+                <h3>Browser compatibility issue detected.</h3>
+                <br />
+                <br />
+                <p>EVS was built to take advantage of the latest in HTML 5 technology. As your browser is not fully HTML 5 compatible, you will be unable to use the EVS site. Please use Chrome, FireFox, Safari or Internet Explorer 10.</p>
+            </div>
+            <div id="appUpload">
+                <h3>Step 1: Select a extension to verify</h3>
+                <span class="subMessage">Select a file from your computer or drag and drop a file to the text box below.</span><br />
+                <br />
+                <input type="file" id="FileInput" class="fileInput" accept="application/zip, application/x-zip, application/x-zip-compressed" /><br />
+                <br />
+                <h3>Step 2: Begin the verification process</h3>
+                <input type="button" id="upload" name="Upload" value="Upload" onclick="startUpload('FileInput', 1048576, 'statusMessage', 'upload');" class="button" />&nbsp;
+                <span id="statusMessage" class="message"></span>
+            </div>
+            <div id="appProgress">
+                <h2>Total Progress</h2>
+                <br />
+                <progress id="totalProgress" value="0" max="100" style="width: 100%; height: 10px"></progress>
+                <br />
+                <br />
+                <h2 id="stepProgressMessage">Uploading Extension</h2>
+                <br />
+                <progress id="stepProgress" value="0" max="100" style="width: 100%; height: 10px"></progress>
+                <br />
+            </div>
+        </div>
+    </div>
+</body>
+</html>
