@@ -4,10 +4,10 @@ EVS attempts to simplify the extension development and testing process by automa
 
 # Major Architecture
 * Website Flow
-![EVS Website flow](website-flow.jpg)
+![EVS Website flow](website-flow.png)
 
 * EVS Worker Flow
-![EVS Worker Flow](service-flow.jpg)
+![EVS Worker Flow](service-flow.png)
 
 # Solution Project
 * EVSAppController (Database Layer)
