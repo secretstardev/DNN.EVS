@@ -19,7 +19,7 @@ EVS attempts to simplify the extension development and testing process by automa
 * EVSWorkerService (Background service deployment)
 * PackageVerification (Rules for package verification)
 * PackageVerification.AssemblyScanner (Support project for assemblies verification)
-* PackageVerification.AssemblyScanner (Support project for basic information, such as application version, sql server version)
+* PackageVerification.AssemblyScanner.ConsoleApp (Support project for basic information, such as application version, sql server version)
 * PackageVerification.SQLRunner (Running sql scripts)
 * PackageVerification.SqlScanner (Scan sql scripts)
 * evswebsite (User Interface Site)
