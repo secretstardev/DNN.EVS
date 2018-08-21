@@ -1,8 +1,9 @@
-Dnn.EVS
-# Project Description
+# DNN (formerly DotNetNuke) Extension Verification Service
+
+## Project Description
 EVS attempts to simplify the extension development and testing process by automating some of the initial compatibility checks. Currently EVS conducts this compatibility checking by focusing on three key areas which include the package manifest, SQL scripts and assemblies.
 
-# Major Architecture
+### Major Architecture
 * Website Flow
 
 ![EVS Website flow](website-flow.png)
@@ -11,7 +12,7 @@ EVS attempts to simplify the extension development and testing process by automa
 
 ![EVS Worker Flow](service-flow.png)
 
-# Solution Project
+### Solution Project
 * EVSAppController (Database Layer)
 * EVSWebAPI (API site)
 * EVSWebAPIService (API deployment)
