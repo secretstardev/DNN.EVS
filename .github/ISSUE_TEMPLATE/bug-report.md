@@ -32,25 +32,3 @@ Paste the error log that is related to this issue.
 
 ## Additional context
 Add any other context about the bug that may be helpful for resolution.
-
-## Affected version
-<!-- Check all that apply and add more if necessary -->
-
-* [x] 9.2.2
-* [x] 9.2.1
-* [x] 9.2
-* [x] 9.1.1
-* [ ] 9.1
-* [ ] 9.0
-
-## Affected browser
-<!-- 
-  Check all that apply and add more if necessary.
-  If possible, please also specify exact versions and mention the operating system
--->
-
-* [ ] Chrome
-* [ ] Firefox
-* [ ] Safari
-* [ ] Internet Explorer
-* [ ] Edge
