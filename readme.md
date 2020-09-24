@@ -12,6 +12,11 @@ EVS attempts to simplify the extension development and testing process by automa
 
 ![EVS Worker Flow](service-flow.png)
 
+* Azure Resources
+
+![Azure Resources](resources.png)
+evoqdatabase structure: https://github.com/dnnsoftware/Dnn.EVS/tree/master/evsservices/SQL%20Scripts
+
 ### Solution Project
 * EVSAppController (Database Layer)
 * EVSWebAPI (API site)
